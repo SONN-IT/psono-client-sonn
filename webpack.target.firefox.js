@@ -9,7 +9,7 @@ const path = require('path');
 const commit_tag = process.env.CI_COMMIT_TAG;
 const commit_sha = process.env.CI_COMMIT_SHA;
 
-let version = '1.1.0';
+let version = '2.4.0';
 let hash = 'abcd1234';
 
 if (/^v\d*\.\d*\.\d*$/.test(commit_tag)) {

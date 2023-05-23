@@ -1,22 +1,15 @@
 {
   "backend_servers": [{
-    "title": "Psono.pw"
+    "title": "SONN Passwortmanager",
+    "url": "https://psono.sonn.intern/server",
+    "domain": "sonn.at"
   }],
-  "allow_custom_server": true,
+  "base_url": "https://psono.sonn.intern/",
+  "allow_custom_server": false,
   "allow_registration": true,
   "allow_lost_password": true,
+  "disable_download_bar": true,
   "authentication_methods": ["AUTHKEY", "LDAP"],
-  "more_links": [{
-    "href": "https://doc.psono.com/",
-    "title": "DOCUMENTATION",
-    "class": "fa-book"
-  },{
-    "href": "privacy-policy.html",
-    "title": "PRIVACY_POLICY",
-    "class": "fa-user-secret"
-  },{
-    "href": "https://www.psono.com",
-    "title": "ABOUT_US",
-    "class": "fa-info-circle"
-  }]
+  "saml_provider": []
 }
+
