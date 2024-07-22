@@ -671,28 +671,29 @@ function disableBrowserPasswordSaving(value) {
 
         let oldPMValue = getStore().getState().client.disableBrowserPm;
         value = value !== undefined ? value : oldPMValue;
-        if (TARGET === "firefox") {
-            function onSet(result) {
-                if (result) {
-                    return true;
-                } else {
-                    console.log("Sadness!", result);
-                    return false;
-                }
-            }
-            const setting = browser.privacy.services.passwordSavingEnabled.set({
-                value: !value,
-            });
-            setting.then(onSet);
-        } else if (TARGET === "chrome") {
-            chrome.privacy.services.passwordSavingEnabled.set({ value: !value }, function () {
-                if (chrome.runtime.lastError !== undefined) {
-                    console.log("Sadness!", chrome.runtime.lastError);
-                    return false;
-                }
-                return true;
-            });
-        }
+        // if (TARGET === "firefox") {
+        //     function onSet(result) {
+        //         if (result) {
+        //             return true;
+        //         } else {
+        //             console.log("Sadness!", result);
+        //             return false;
+        //         }
+        //     }
+        //     const setting = browser.privacy.services.passwordSavingEnabled.set({
+        //         value: !value,
+        //     });
+        //     setting.then(onSet);
+        // } else if (TARGET === "chrome") {
+        //     chrome.privacy.services.passwordSavingEnabled.set({ value: !value }, function () {
+        //         if (chrome.runtime.lastError !== undefined) {
+        //             console.log("Sadness!", chrome.runtime.lastError);
+        //             return false;
+        //         }
+        //         return true;
+        //     });
+        // }
+        return true;
     })
 }
 
